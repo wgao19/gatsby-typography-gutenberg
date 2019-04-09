@@ -34,6 +34,9 @@
     "react-helmet": "^5.2.0",
     "react-share": "^2.4.0",
     "react-twitter-widgets": "^1.7.1",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-plugin-code": "^0.16.19",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
