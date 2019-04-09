@@ -36,7 +36,10 @@ and laid the
           </p>
 
           <figure className="floatRight">
-            <img src="assets/images/Examples/Gutenberg.jpg" alt="Gutenberg" />
+            <img
+              src="http://matejlatin.github.io/Gutenberg/example/assets/images/Examples/Gutenberg.jpg"
+              alt="Gutenberg"
+            />
             <figcaption>Johannes Gutenberg</figcaption>
           </figure>
           <p>
@@ -107,7 +110,7 @@ and laid the
 
           <figure className="floatLeft">
             <img
-              src="assets/images/Examples/Printing-press.png"
+              src="http://matejlatin.github.io/Gutenberg/example/assets/images/Examples/Printing-press.png"
               alt="Early Printing Press"
             />
             <figcaption>
