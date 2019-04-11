@@ -1,20 +1,23 @@
 // consts from gutenberg config
 // https://github.com/matejlatin/Gutenberg/blob/master/src/style/_gutenberg-config.scss
 
+import { unitless, unit } from "./utils/unit";
+
 // Theme / Fonts
 const theme = "Merriweather"; // [ Merriweather / OpenSans / custom ]
 const customFontBody = null; // [ "Libre Baskerville", Georgia, serif ]
 const customFontHeading = null;
+const googleFonts = [];
 
 // Paragraph indenting
 const paragraphIndent = false; // [ true / false ]
 
 // Base sizes
-const baseFontSize = 100; // In %. Also used for mobile. Number only, no units.
-const baseFontSizeDesktop = 112.5; // In %. Used to calculate the desktop font size. Number only, no units.
+const baseFontSize = "16px"; // 16px converts to 100% at instantiation
+const baseFontSizeDesktop = "112.5%"; // In %. Used to calculate the desktop font size. Number only, no units.
 const lineHeight = 1.625;
 const lineHeightDesktop = 1.7;
-const maxWidth = 35; // Number only, no units. Gets converted to REMs and pixels.
+const maxWidth = "35rem";
 
 // Modular Scale
 const modularScale = {
@@ -42,12 +45,16 @@ const leading = Math.ceil(base * lineHeight);
 const leadingRem = leading / base;
 
 // Desktop base & leading
-const baseDesktop = 16 * (baseFontSizeDesktop / 100);
+
+const baseDesktop = 16 * (unitless(baseFontSizeDesktop) / 100);
+
 const leadingDesktop = Math.ceil(baseDesktop * lineHeightDesktop);
 const leadingRemDesktop = leadingDesktop / baseDesktop;
 
 export default {
   theme,
+  googleFonts,
+
   customFontBody,
   customFontHeading,
 
@@ -73,7 +80,8 @@ export default {
   leadingRem,
 
   // Desktop base & leading
-  baseDesktop,
+  // removed from export because this is computable from base font size desktop
+  // baseDesktop,
   leadingDesktop,
   leadingRemDesktop
 };
