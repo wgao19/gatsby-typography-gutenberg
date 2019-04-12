@@ -12,7 +12,8 @@ const gutenberg = (options = defaultOptions) => {
 
     baseFontSize: baseFontSizeFromGutenberg,
     baseFontSizeDesktop: desktopFontSizeInPercentage,
-    lineHeight: baseLineHeight,
+    lineHeight,
+    lineHeightDesktop,
 
     maxWidth,
 
@@ -44,10 +45,15 @@ const gutenberg = (options = defaultOptions) => {
     headerFontFamily = customFontHeading || defaultFonts;
   }
 
+  const isDesktop = true; // TODO: check for desktop UA
+
+  // different from Gutenberg because it treats leading differently with Typographyjs
+  // TODO: is it a good idea to introduce the semantic definition for leading?
+  const baseLineHeight = isDesktop ? lineHeightDesktop : lineHeight;
+
   const mediaString = `@media screen and (min-width: ${unitless(maxWidth) +
     5}rem)`;
 
-  const isDesktop = true; // TODO: check for desktop UA
   const baseFontSize = isDesktop ? "18px" : baseFontSizeFromGutenberg;
 
   return {
@@ -69,11 +75,9 @@ const gutenberg = (options = defaultOptions) => {
       { adjustFontSizeTo, rhythm, establishBaseline },
       options
     ) => ({
-      ":root": {
-        ...establishBaseline({ baseFontSize })
-      },
       "*": {
         boxSizing: "inherit",
+        lineHeight: rhythm(1),
         marginBottom: rhythm()
       },
       [mediaString]: {
