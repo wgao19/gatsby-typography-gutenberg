@@ -13,24 +13,17 @@ class Example extends React.Component {
             printed books, the “Forty–Two–Line” Bible.
           </p>
           <p>
-            <strong>Johannes Gensfleisch zur Laden zum Gutenberg</strong>
-            {' '}
-(c.
+            <strong>Johannes Gensfleisch zur Laden zum Gutenberg</strong> (c.
             1398 – 1468) was a German blacksmith, goldsmith, printer, and
             publisher who introduced printing to Europe. His invention of
             mechanical movable type printing started the Printing Revolution and
             is widely regarded as the most important event of the modern period.
             It played a key role in the development of the Renaissance,
-            Reformation, the Age of
-            {" "}
+            Reformation, the Age of{" "}
             <a href="http://en.wikipedia.org/wiki/Johannes_Gutenberg">
               Enlightenment
             </a>
-            , and the 
-            {' '}
-            <a href="test">Scientific revolution</a>
-            {' '}
-and laid the
+            , and the <a href="test">Scientific revolution</a> and laid the
             material basis for the modern knowledge-based economy and the spread
             of learning to the masses.
           </p>
@@ -261,13 +254,12 @@ and laid the
 
           <figure>
             <img
-              src="assets/images/Examples/movable-type.jpg"
+              src="http://matejlatin.github.io/Gutenberg/example/assets/images/Examples/movable-type.jpg"
               alt="Movable Type"
             />
             <figcaption>
               Movable metal type, and composing stick, descended from
-              Gutenberg's press. Photo by Willi Heidelbach. Licensed under
-              {" "}
+              Gutenberg's press. Photo by Willi Heidelbach. Licensed under{" "}
               <a
                 href="http://creativecommons.org/licenses/by/2.5"
                 title="Creative Commons Attribution 2.5"
@@ -400,14 +392,11 @@ and laid the
         <footer>
           <p>
             <small>
-              Adapted from
-              {" "}
+              Adapted from{" "}
               <a href="https://en.wikipedia.org/wiki/Johannes_Gutenberg">
                 Wikipedia
-              </a>
-              {" "}
-              and
-              {" "}
+              </a>{" "}
+              and{" "}
               <a href="http://www.biography.com/people/johannes-gutenberg-9323828">
                 biography.com
               </a>
