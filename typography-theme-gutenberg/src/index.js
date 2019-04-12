@@ -76,7 +76,6 @@ const gutenberg = (options = defaultOptions) => {
       options
     ) => ({
       "*": {
-        boxSizing: "inherit",
         lineHeight: rhythm(1),
         marginBottom: rhythm()
       },
