@@ -15,6 +15,11 @@ const gutenberg = (options = defaultOptions) => {
     lineHeight,
     lineHeightDesktop,
 
+    colorFontBody,
+    colorFontLight,
+
+    // wip
+
     maxWidth,
 
     modularScale,
@@ -69,6 +74,7 @@ const gutenberg = (options = defaultOptions) => {
 
     headerFontFamily,
     bodyFontFamily,
+
     blockMarginBottom: leading,
 
     overrideStyles: (
@@ -79,6 +85,25 @@ const gutenberg = (options = defaultOptions) => {
         lineHeight: rhythm(1),
         marginBottom: rhythm()
       },
+      a: {
+        background: "transparent",
+        color: colorFontBody,
+        transition: "all .3s"
+      },
+      "a:active, a:hover": {
+        outline: 0
+      },
+      "a:visited": {
+        color: colorFontLight
+      },
+      "a:hover": {
+        color: colorFontBody
+      },
+      "a:active": {
+        color: "#f00"
+      },
+
+      // wip
       [mediaString]: {
         ":root": {
           fontSize: baseFontSize
