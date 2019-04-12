@@ -5,8 +5,13 @@ import defaultOptions from "./defaults";
 const gutenberg = (options = defaultOptions) => {
   const {
     theme,
-    baseFontSize,
-    baseFontSizeDesktop,
+
+    customFontBody,
+    customFontHeading,
+    defaultFonts,
+
+    baseFontSize: baseFontSizeFromGutenberg,
+    baseFontSizeDesktop: desktopFontSizeInPercentage,
     lineHeight: baseLineHeight,
 
     maxWidth,
@@ -15,23 +20,35 @@ const gutenberg = (options = defaultOptions) => {
     leading
   } = options;
 
-  let googleFonts = options.googleFonts;
+  let googleFonts = options.googleFonts,
+    headerFontFamily = [],
+    bodyFontFamily = [];
 
+  // TODO: Allow custom google fonts
   if (theme === "Merriweather") {
     googleFonts.push({
       name: "Merriweather",
       styles: ["400", "400i", "700", "700i"]
     });
-  }
-  if (theme === "OpenSans") {
+    bodyFontFamily.push(...defaultFonts);
+    headerFontFamily = bodyFontFamily;
+  } else if (theme === "OpenSans") {
     googleFonts.push({
       name: "Open Sans",
       styles: ["400", "400i", "700"]
     });
+    bodyFontFamily.push("Open Sans", "Arial", "Helvetica", "Sans-serif");
+    headerFontFamily = bodyFontFamily;
+  } else {
+    bodyFontFamily = customFontBody || defaultFonts;
+    headerFontFamily = customFontHeading || defaultFonts;
   }
 
   const mediaString = `@media screen and (min-width: ${unitless(maxWidth) +
     5}rem)`;
+
+  const isDesktop = true; // TODO: check for desktop UA
+  const baseFontSize = isDesktop ? "18px" : baseFontSizeFromGutenberg;
 
   return {
     includeNormalize: true,
@@ -39,28 +56,38 @@ const gutenberg = (options = defaultOptions) => {
 
     googleFonts,
     baseFontSize,
-    baseFontSizeDesktop,
+
+    // typography does not need this value
+    // baseFontSizeDesktop,
     baseLineHeight,
 
-    headerFontFamily: ["Merriweather"],
-    bodyFontFamily: ["Merriweather"],
+    headerFontFamily,
+    bodyFontFamily,
     blockMarginBottom: leading,
 
     overrideStyles: (
-      { adjustFontSizeTo, rhythm, scale, establishBaseline },
+      { adjustFontSizeTo, rhythm, establishBaseline },
       options
     ) => ({
       ":root": {
         ...establishBaseline({ baseFontSize })
       },
       "*": {
-        marginLeft: "auto !important",
-        marginRight: "auto !important"
+        boxSizing: "inherit",
+        marginBottom: rhythm()
       },
       [mediaString]: {
+        ":root": {
+          fontSize: baseFontSize
+        },
+        "*": {
+          maxWidth,
+          marginLeft: "auto !important",
+          marginRight: "auto !important"
+          // marginBottom: rhy
+        },
         article: {
-          maxWidth:
-            (unitless(maxWidth) * unitless(baseFontSizeDesktop)) / 100 + "rem"
+          maxWidth: unitless(maxWidth) * 1.5 + "rem"
         }
       },
       body: {

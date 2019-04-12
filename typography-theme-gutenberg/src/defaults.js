@@ -83,5 +83,8 @@ export default {
   // removed from export because this is computable from base font size desktop
   // baseDesktop,
   leadingDesktop,
-  leadingRemDesktop
+  leadingRemDesktop,
+
+  // helpers
+  defaultFonts: ["Merriweather", "Georgia", "sans-serif"]
 };
