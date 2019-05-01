@@ -1,3 +1,5 @@
 module.exports = {
-  __experimentalThemes: [{ resolve: "gatsby-theme-gutenberg", options: {} }]
+  __experimentalThemes: [
+    { resolve: "gatsby-theme-gutenberg-merriweather", options: {} }
+  ]
 };
