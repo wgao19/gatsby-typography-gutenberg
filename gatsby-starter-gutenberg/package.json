@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
+  "name": "gatsby-starter-multiple-author",
+  "description": "A Gatsby starter that supports multiple author.",
   "version": "1.1.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "author": "Wei Gao <wgao19@gmail.com>",
   "dependencies": {
     "gatsby": "2.0.91",
     "gatsby-image": "2.0.26",
@@ -17,6 +17,7 @@
     "gatsby-plugin-sharp": "2.0.17",
     "gatsby-plugin-sitemap": "2.0.4",
     "gatsby-plugin-twitter": "2.0.8",
+    "gatsby-plugin-typography": "^2.2.13",
     "gatsby-remark-autolink-headers": "2.0.12",
     "gatsby-remark-copy-linked-files": "2.0.8",
     "gatsby-remark-images": "3.0.1",
@@ -25,11 +26,11 @@
     "gatsby-source-filesystem": "2.0.16",
     "gatsby-transformer-remark": "2.2.0",
     "gatsby-transformer-sharp": "2.1.10",
+    "gatsby-transformer-yaml": "^2.1.12",
     "lodash": "^4.17.4",
     "moment": "^2.23.0",
     "prismjs": "^1.15.0",
     "react": "^16.7.0",
-    "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-share": "^2.4.0",
@@ -37,7 +38,6 @@
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-plugin-code": "^0.16.19",
-    "typography-theme-gutenberg": "1.0.0",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
