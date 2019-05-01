@@ -8,6 +8,7 @@
   "private": true,
   "workspaces": [
     "typography-theme-gutenberg",
+    "typography-theme-gutenberg-merriweather",
     "gatsby-starter-gutenberg",
     "gatsby-theme-gutenberg",
     "gatsby-theme-example"

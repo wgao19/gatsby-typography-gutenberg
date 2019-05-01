@@ -14,9 +14,6 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         {children}
-        <small>
-          <Link to="/">go back home</Link>
-        </small>
       </div>
     );
   }

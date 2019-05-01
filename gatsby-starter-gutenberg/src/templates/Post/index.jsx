@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import _ from "lodash";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
@@ -29,13 +30,19 @@ export default class PostTemplate extends React.Component {
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
+          <article>
             <h1>{post.title}</h1>
+            <div className="attention-grabber">{post.description}</div>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
+            {/* TODO: style this <div className="post-meta">
               <PostTags tags={post.tags} />
-            </div>
-          </div>
+            </div> */}
+            <p>
+              <small>
+                <Link to="/">go back home</Link>
+              </small>
+            </p>
+          </article>
         </div>
       </Layout>
     );
@@ -55,6 +62,7 @@ export const pageQuery = graphql`
         date
         category
         tags
+        description
       }
       fields {
         nextTitle
