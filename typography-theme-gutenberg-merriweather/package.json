@@ -1,0 +1,12 @@
+{
+  "name": "typography-theme-gutenberg-merriweather",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "typography": "^0.16.19"
+  },
+  "dependencies": {
+    "parse-unit": "^1.0.1"
+  }
+}
