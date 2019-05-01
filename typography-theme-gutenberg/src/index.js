@@ -103,7 +103,6 @@ const gutenberg = (options = defaultOptions) => {
         color: "#f00"
       },
 
-      // wip
       [mediaString]: {
         ":root": {
           fontSize: baseFontSize

@@ -125,8 +125,29 @@ const gutenbergMerriweather = {
     ".floatLeft": {
       float: "left"
     },
-
-    // wip
+    hr: {
+      marginTop: rhythm(2),
+      marginBottom: rhythm(2),
+      boxSizing: "content-box",
+      border: 0,
+      color: colorFontBody,
+      display: "block",
+      height: leading + "px",
+      marginRight: "auto",
+      marginLeft: "auto",
+      textAlign: "center",
+      background: "transparent"
+    },
+    "hr::before": {
+      content: "'***'",
+      letterSpacing: "0.2em"
+    },
+    blockquote: {
+      fontStyle: "italic",
+      paddingLeft: "1.4375rem"
+      // TODO: add figure blockquote
+      // https://github.com/matejlatin/Gutenberg/blob/25ba870789/src/style/modules/_quote.scss#L18
+    },
     [mediaString]: {
       html: {
         fontSize: baseFontSizeDesktop
@@ -153,6 +174,9 @@ const gutenbergMerriweather = {
         maxWidth: unitless(maxWidth) * 1.5 + "rem",
         marginLeft: "auto !important",
         marginRight: "auto !important"
+      },
+      blockquote: {
+        paddingLeft: "2rem"
       },
       ...getHeadings(baseDesktop / 100)
     },
