@@ -98,6 +98,12 @@ const gutenbergMerriweather = {
     "a:active": {
       color: "#f00"
     },
+    "h1 a, h2 a, h3 a, h4 a, h5 a, h6 a": {
+      textDecoration: "none"
+    },
+    "h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited": {
+      color: colorFontBody
+    },
     ".attention-grabber": {
       ...adjustFontSizeTo("120%"),
       lineHeight: rhythm(1.2)
@@ -153,7 +159,7 @@ const gutenbergMerriweather = {
       html: {
         fontSize: baseFontSizeDesktop
       },
-      "article *": {
+      "article *, main *": {
         maxWidth,
         marginLeft: "auto !important",
         marginRight: "auto !important",
@@ -170,7 +176,7 @@ const gutenbergMerriweather = {
         maxWidth: unitless(maxWidth) * 0.5 + "rem",
         padding: `0 ${rhythm(1)}`
       },
-      article: {
+      "article, main": {
         /** TODO: now post needs to render this in article */
         maxWidth: unitless(maxWidth) * 1.5 + "rem",
         marginLeft: "auto !important",
