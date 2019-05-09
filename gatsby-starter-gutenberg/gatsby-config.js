@@ -45,6 +45,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-normalize-paths",
+            options: {
+              pathFields: ["cover"]
+            }
+          },
+          {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 690
