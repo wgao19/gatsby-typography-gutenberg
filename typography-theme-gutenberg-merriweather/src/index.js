@@ -161,8 +161,8 @@ const gutenbergMerriweather = {
       },
       "article *, main *": {
         maxWidth,
-        marginLeft: "auto !important",
-        marginRight: "auto !important",
+        marginLeft: "auto",
+        marginRight: "auto",
         /**
          * TODO
          * this is not right likely due to rounding, need to fix
@@ -179,8 +179,8 @@ const gutenbergMerriweather = {
       "article, main": {
         /** TODO: now post needs to render this in article */
         maxWidth: unitless(maxWidth) * 1.5 + "rem",
-        marginLeft: "auto !important",
-        marginRight: "auto !important"
+        marginLeft: "auto",
+        marginRight: "auto"
       },
       blockquote: {
         paddingLeft: "2rem"
