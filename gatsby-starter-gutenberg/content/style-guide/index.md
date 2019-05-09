@@ -1,6 +1,6 @@
 ---
 title: "Style Guide"
-date: 2019-04-26
+date: 1970-01-01
 author: Curious Cat
 category: blog
 tags:
