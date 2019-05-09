@@ -159,7 +159,9 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      cover
+                      cover {
+                        publicURL
+                      }
                       date
                       category
                       tags
