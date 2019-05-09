@@ -11,6 +11,7 @@ const lineHeight = 1.625;
 const lineHeightDesktop = 1.7;
 // TODO: is it a good idea to introduce the semantic definition for leading?
 const leading = Math.ceil(base * lineHeight);
+const leadingDesktop = Math.ceil(base * lineHeightDesktop);
 const baseLineHeight = lineHeightDesktop;
 
 const maxWidth = "35rem";
@@ -126,8 +127,8 @@ const gutenbergMerriweather = {
       float: "left"
     },
     hr: {
-      marginTop: rhythm(2),
-      marginBottom: rhythm(2),
+      marginTop: `${leading * 2}px`,
+      marginBottom: `${leading * 2}px`,
       boxSizing: "content-box",
       border: 0,
       color: colorFontBody,
@@ -177,6 +178,10 @@ const gutenbergMerriweather = {
       },
       blockquote: {
         paddingLeft: "2rem"
+      },
+      hr: {
+        marginTop: `${leadingDesktop * 2}px`,
+        marginBottom: `${leadingDesktop * 2}px`
       },
       ...getHeadings(baseDesktop / 100)
     },
