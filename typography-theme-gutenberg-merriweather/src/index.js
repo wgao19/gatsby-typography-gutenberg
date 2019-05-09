@@ -9,7 +9,6 @@ const baseDesktop = 112.5;
 // different from Gutenberg because it treats leading differently with Typographyjs
 const lineHeight = 1.625;
 const lineHeightDesktop = 1.7;
-// TODO: is it a good idea to introduce the semantic definition for leading?
 const leading = Math.ceil(base * lineHeight);
 const leadingDesktop = Math.ceil(base * lineHeightDesktop);
 const baseLineHeight = lineHeightDesktop;
@@ -80,7 +79,29 @@ const gutenbergMerriweather = {
       lineHeight: rhythm(1),
       marginBottom: rhythm(1)
     },
+
+    /**
+     * headings
+     * https://github.com/matejlatin/Gutenberg/blob/master/src/style/modules/_heading.scss
+     */
     ...getHeadings(),
+    "h1 + h2": {
+      marginTop: rhythm(1)
+    },
+    "h2 + h3, h3 + h4, h4 + h5": {
+      marginTop: rhythm(0.5)
+    },
+    "h5 + h6": {
+      marginTop: rhythm(-0.5)
+    },
+    h6: {
+      fontStyle: "italic",
+      fontWeight: "normal"
+    },
+    /**
+     * anchors
+     * https://github.com/matejlatin/Gutenberg/blob/master/src/style/modules/_anchor.scss
+     */
     a: {
       background: "transparent",
       color: colorFontBody,
@@ -104,10 +125,18 @@ const gutenbergMerriweather = {
     "h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited": {
       color: colorFontBody
     },
+    /**
+     * attention grabber
+     * not really present in Gatsby sites
+     */
     ".attention-grabber": {
       ...adjustFontSizeTo("120%"),
       lineHeight: rhythm(1.2)
     },
+    /**
+     * figure and figcaption
+     * not compiled to from markdown remark
+     */
     figure: {
       display: "block"
     },
@@ -132,6 +161,10 @@ const gutenbergMerriweather = {
     ".floatLeft": {
       float: "left"
     },
+    /**
+     * horizontal rules
+     * https://github.com/matejlatin/Gutenberg/blob/master/src/style/modules/_horizontal-rule.scss
+     */
     hr: {
       marginTop: `${leading * 2}px`,
       marginBottom: `${leading * 2}px`,
@@ -152,9 +185,14 @@ const gutenbergMerriweather = {
     blockquote: {
       fontStyle: "italic",
       paddingLeft: "1.4375rem"
-      // TODO: add figure blockquote
-      // https://github.com/matejlatin/Gutenberg/blob/25ba870789/src/style/modules/_quote.scss#L18
+      /**
+       * TODO: add figure blockquote
+       * https://github.com/matejlatin/Gutenberg/blob/25ba870789/src/style/modules/_quote.scss#L18
+       */
     },
+    /**
+     * fits desktop
+     */
     [mediaString]: {
       html: {
         fontSize: baseFontSizeDesktop
@@ -176,8 +214,10 @@ const gutenbergMerriweather = {
         maxWidth: unitless(maxWidth) * 0.5 + "rem",
         padding: `0 ${rhythm(1)}`
       },
+      /**
+       * main is not present in gutenberg, added for site styling
+       */
       "article, main": {
-        /** TODO: now post needs to render this in article */
         maxWidth: unitless(maxWidth) * 1.5 + "rem",
         marginLeft: "auto",
         marginRight: "auto"
