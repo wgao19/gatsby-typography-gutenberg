@@ -21,13 +21,13 @@
     "gatsby-remark-autolink-headers": "2.0.12",
     "gatsby-remark-copy-linked-files": "2.0.8",
     "gatsby-remark-images": "3.0.1",
+    "gatsby-remark-normalize-paths": "^1.0.0",
     "gatsby-remark-prismjs": "3.2.0",
     "gatsby-remark-responsive-iframe": "2.0.8",
     "gatsby-source-filesystem": "2.0.16",
     "gatsby-transformer-remark": "2.2.0",
     "gatsby-transformer-sharp": "2.1.10",
     "gatsby-transformer-yaml": "^2.1.12",
-    "typography-theme-gutenberg-merriweather": "^0.1.0",
     "lodash": "^4.17.4",
     "moment": "^2.23.0",
     "prismjs": "^1.15.0",
@@ -39,6 +39,7 @@
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-plugin-code": "^0.16.19",
+    "typography-theme-gutenberg-merriweather": "^0.1.0",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
