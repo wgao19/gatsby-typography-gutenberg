@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-multiple-author",
-  "description": "A Gatsby starter that supports multiple author.",
+  "name": "gatsby-starter-gutenberg",
+  "description": "A Gatsby starter with theme Gutenberg",
   "version": "1.1.0",
   "author": "Wei Gao <wgao19@gmail.com>",
   "dependencies": {
-    "gatsby": "2.0.91",
+    "gatsby": "2.4.3",
     "gatsby-image": "2.0.26",
     "gatsby-plugin-catch-links": "2.0.9",
     "gatsby-plugin-feed": "2.0.11",
@@ -39,7 +39,7 @@
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-plugin-code": "^0.16.19",
-    "typography-theme-gutenberg-merriweather": "^0.1.0",
+    "typography-theme-gutenberg": "^0.1.0",
     "url-join": "^4.0.0"
   },
   "devDependencies": {

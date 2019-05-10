@@ -67,10 +67,6 @@ export const pageQuery = graphql`
         description
       }
       fields {
-        nextTitle
-        nextSlug
-        prevTitle
-        prevSlug
         slug
         date
       }

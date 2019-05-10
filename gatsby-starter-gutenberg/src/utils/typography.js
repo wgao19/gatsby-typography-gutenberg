@@ -1,5 +1,5 @@
 import Typography from "typography";
-import gutenberg from "typography-theme-gutenberg-merriweather";
+import gutenberg from "typography-theme-gutenberg";
 import CodePlugin from "typography-plugin-code";
 
 const typography = new Typography(gutenberg);
