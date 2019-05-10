@@ -4,8 +4,10 @@ Porting [Gutenberg](http://matejlatin.github.io/Gutenberg/) to [Gatsby](https://
 
 ## Packages
 
-- [typography-theme-gutenberg](./typography-theme-gutenberg/README.md) Typography.js presets for Gutenberg theme
-- [gatsby-theme-gutenberg](./gatsby-theme-gutenberg/README.md) A Gatsby theme that uses the Gutenberg themes
+There are two packages in this repo:
+
+- [typography-theme-gutenberg](./typography-theme-gutenberg/README.md) A [Typography.js](https://github.com/kyleamathews/typography.js) theme following [Gutenberg](https://github.com/matejlatin/Gutenberg/)
+- [gatsby-theme-gutenberg](./gatsby-theme-gutenberg/README.md) A [Gatsby Theme](https://github.com/gatsbyjs/gatsby/tree/master/docs/docs/themes) that uses the Gutenberg typography styles
 
 ## Related
 
