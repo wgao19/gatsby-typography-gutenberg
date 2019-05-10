@@ -1,1 +1,0 @@
-# Typography Theme Gutenberg Merriweather
