@@ -1,3 +1,5 @@
+![](https://image.slidesharecdn.com/wcus2017-gutenberg-slideshare-171208181232/95/gutenberg-and-the-wordpress-of-tomorrow-wordcamp-us-2017-30-638.jpg?cb=1512756815)
+
 # gatsby-typography-gutenberg
 
 Porting [Gutenberg](http://matejlatin.github.io/Gutenberg/) to [Gatsby](https://gatsbyjs.org) and [Typography.js](https://kyleamathews.github.io/typography.js/).
