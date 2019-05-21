@@ -197,7 +197,7 @@ const gutenbergMerriweather = {
       html: {
         fontSize: baseFontSizeDesktop
       },
-      "article *, main *": {
+      "article *, main *, footer *": {
         maxWidth,
         marginLeft: "auto",
         marginRight: "auto",
@@ -217,7 +217,7 @@ const gutenbergMerriweather = {
       /**
        * main is not present in gutenberg, added for site styling
        */
-      "article, main": {
+      "article, main, footer": {
         maxWidth: unitless(maxWidth) * 1.5 + "rem",
         marginLeft: "auto",
         marginRight: "auto"
